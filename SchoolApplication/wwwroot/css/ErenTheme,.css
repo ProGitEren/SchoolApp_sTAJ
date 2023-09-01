@@ -1,0 +1,38 @@
+﻿.nav-item-eren{
+    color: #7b9da8;
+    margin:auto;
+    text-decoration:none;
+    padding:10px;
+    
+}
+
+.nav-item-eren a{
+    color: #7b9da8;
+    margin:auto;
+    text-decoration:none;
+  
+}
+
+eren-btn-primary{
+    color: #725696;
+    background-color: #23c2a3;
+    border-color:#340d5d;
+    
+}
+    eren-btn-primary:hover {
+        background-color: #0a7188;
+        color: #725656;
+    }
+    eren-btn-primary:active{
+
+
+    }
+
+--bs-btn-active-color: #fff;
+--bs-btn-active-bg: #59359a;
+--bs-btn-active-border-color: #533291;
+--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+--bs-btn-disabled-color: #fff;
+--bs-btn-disabled-bg: #6f42c1;
+--bs-btn-disabled-border-color: #6f42c1

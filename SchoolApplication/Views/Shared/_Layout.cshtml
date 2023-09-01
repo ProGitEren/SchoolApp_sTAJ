@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SchoolApplication</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/Boots.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SchoolApplication.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/ErenTheme,.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-outline-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/Images/logoeren.png" alt="SchoolAppLogo" width="30" height="30" class="d-inline-block align-text-top">
+                    School App
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item-eren">
+                            <a  asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
+                        {
+                            <li class="nav-item-eren">
+                                <a class="nav-link text-outline-primary" asp-area="" asp-controller="Student" asp-action="Index">Student</a>
+                            </li>
+                        }
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Login" asp-action="StudentLogin">Student Login</a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="SignUp" asp-action="RegistererSignUp">Registerer Sign Up</a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Teacher"))
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Grade" asp-action="Index">Grades</a>
+                            </li>
+                        }
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Login" asp-action="RegistererLogin">Registerer Login</a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="SignOut" asp-action="Logout">Sign Out</a>
+                            </li>
+                        }
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Login" asp-action="TeacherLogin">Teacher Login</a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Teacher" asp-action="Index">Teacher</a>
+                            </li>
+                        }
+                        <li class="nav-item-eren">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - SchoolApplication - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

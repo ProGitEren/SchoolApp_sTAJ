@@ -1,0 +1,107 @@
+﻿@using SchoolApplication.Models.ViewModels
+@model StudentUpdateViewModel
+
+<br>
+<br>
+<h2 style="color:#cf9e5d;">Update Student</h2>
+<hr />
+
+<form asp-action="Edit" method="post" >
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Name" class="form-label">Student Name</label>
+        <input asp-for="Name" class="form-control" required />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Department" class="form-label">Student Department</label>
+        <select asp-for="Department" class="form-select" required>
+            <option value="0" class="form-control">Machine Engineering</option>
+            <option value="1" class="form-control">Electrical Engineering</option>
+            <option value="2" class="form-control">Computer Science</option>
+            <option value="3" class="form-control">Chemical Engineering</option>
+            <option value="4" class="form-control">Industrial Engineering</option>
+            <option value="5" class="form-control">Medicine</option>
+            <option value="6" class="form-control">Psychology</option>
+            <option value="7" class="form-control">Media and Design</option>
+            <option value="8" class="form-control">Economy</option>
+            <option value="9" class="form-control">Bussiness</option>
+        </select>
+    </div>
+    <div style="width:fit-content;height:10px;"></div>
+   
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Phone">Phone</label>
+        <input asp-for="Phone" class="form-control" type="tel" required pattern="0\d{3}-\d{3}-\d{2}-\d{2}"
+               title="Please enter a valid phone number starting with '0' in the format 0XXX-XXX-XX-XX" placeholder="0555-555-55-55" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Discount">Discount Number</label>
+        <input asp-for="Discount" class="form-control" type="number"  step="5" min="0" max="100" required />
+        <span asp-validation-for="Discount" class="text-danger"></span>
+    </div>
+    <div style="margin-top:20px;space-between;">
+        <button type="submit"
+                class="btn btn-primary"
+                style="border-radius:5px;margin:auto;color:bisque">
+            Update
+        </button>
+        <a asp-controller="Student" asp-action="Index" style="border-radius:5px;margin-left:10px;color:bisque;background-color:#707070;" class="btn">Back To List</a>
+    </div>
+
+
+</form>
+
+<style>
+    /* Apply styles to labels on hover */
+    .form-group input:hover {
+        background-color: #420d65 !important; /* Change this to your desired hover color */
+    }
+
+    .form-group select:hover {
+        background-color: #420d65 !important;
+    }
+
+    .form-select option:hover {
+        background-color: #420d65 !important;
+    }
+
+</style>
+
+<script>
+    const passwordInput = document.getElementById('passwordInput');
+    const showPasswordButton = document.getElementById('showPasswordButton');
+
+    showPasswordButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+        } else {
+            passwordInput.type = 'password';
+        }
+    });
+</script>
+<script>
+    const confrimpasswordInput = document.getElementById('confirmpasswordInput');
+    const confirmshowPasswordButton = document.getElementById('confirmshowPasswordButton');
+
+    confirmshowPasswordButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (confirmpasswordInput.type === 'password') {
+            confirmpasswordInput.type = 'text';
+        } else {
+            confirmpasswordInput.type = 'password';
+        }
+    });
+</script>
+
+@section Scripts{
+
+    <partial name="_ValidationScriptsPartial" />
+
+}
