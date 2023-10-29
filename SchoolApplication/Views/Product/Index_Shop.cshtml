@@ -1,0 +1,69 @@
+﻿@model List<Product>
+
+<style>
+    .card-title {
+        margin-top:10px;
+        height: 35px; /* Set a fixed height for the card titles */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
+<div class="row pb-3">
+
+    @foreach(var product in Model)
+    {
+        <div class="col-lg-3 col-sm-6">
+            <div class="row p-2">
+                <div class="col-12 p-1 bg-dark" style="border-radius:25px;margin-top:8px;padding:8px;">
+                    <div class="card border-0 p-3 shadow border-top border-5 rounded">
+                        <img src="@product.ImagePath" class="card-img-top-rounded" style="width:100%;height:250px;"/>    
+                        <div class="pl-1">
+                            <p class="card-title h5 text-light opacity-75 text-uppercase text-center">@product.Title</p>
+                            <p class="card-title text-warning text-center">by @product.Author</p>
+                        </div>
+                        <div class="pl-1">
+                            <p class="text-info text-opacity-75 text-center">
+                                List Price:
+                                <span class="text-decoration-line-through">
+                                    @product.ListPrice.ToString("c")
+                                </span>
+                            </p>
+
+                        </div>
+                        <div class="pl-1">
+                            <p class="text-info text-opacity-75 text-center">
+                                Starting at: 
+                                <span>
+                                    @product.Price100.ToString("c")
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div>
+                        <a asp-controller="Detail" asp-action="ProductDetail" asp-route-id="@product.Id" class="btn btn-primary bg-gradient border-0 form-control mb-3" style="border-radius:25px;">
+                            Details
+                        </a>
+
+                        <a asp-controller="Product" asp-action="Buy" asp-route-id="@product.Id" class="btn btn-success bg-gradient border-0 form-control mb-3" style="border-radius:25px;">
+                            Buy
+                        </a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    }
+
+
+
+
+
+</div>

@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model List<IdentityRole?>
+
+<br>
+<h2 class="text-center" style="color:blue;">Access Denied</h2>
+<hr />
+<br>
+@if (TempData["errorMessage"] != null)
+{
+    <div style="background-color:transparent;color:red;" class="alert alert-danger">@TempData["errorMessage"]</div>
+}
+
+<div style="background-color:transparent;color:silver;width:100%;margin-top:8%;margin-bottom:25px;font-size:25px;" class="">Roles that exist in the system which may restrict you from accessing this action:</div>
+
+<div class="container" style="width:100%;margin-top:5px;">
+    <ul class="list-group bg-dark" style="width:100%;height:auto;font-size:18px;margin-bottom:15px;color:silver">
+        @foreach (var role in Model)
+        {
+            <li class="list-group-item" style="color:gold;width:100%;height:auto;font-size:25px;">@role.ToString()</li>
+        }
+    </ul>
+</div>
+
+<div class="d-flex justify-content-center align-items-center" style="margin-top:80px;">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-dark" style="posiiton:center;color: lightsteelblue;width:30%;height:auto;">Go to Home Page</a>
+</div>

@@ -27,6 +27,16 @@ namespace SchoolApplication.Controllers
         {
             IList<IdentityUser> identitystudents = await _userManager.GetUsersInRoleAsync("Student");
             List<Student?> students = identitystudents.Select(u => u as Student).ToList();
+            foreach(Student? student in students) 
+            {
+                if(student == null) continue;
+                student.Grades["Math"] = student.Math;
+                student.Grades["Science"] = student.Science;
+                student.Grades["Language"] = student.Language;
+                student.Grades["History"] = student.History;
+                student.Grades["Sports"] = student.Sports;
+
+            }
             return View(students);
         }
 

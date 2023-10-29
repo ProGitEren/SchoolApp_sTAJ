@@ -1,0 +1,86 @@
+﻿@using SchoolApplication.Messages
+@model MessageContainer
+
+<title>Message Details</title>
+
+<body>
+
+    <div class="wrapper3">
+        <div class="bg3"> Message Details </div>
+        <div class="fg3"> Message Details </div>
+    </div>
+    <hr />
+
+    <div class="wrapper">
+        <div class="bg"> Receiver Email </div>
+        <div class="fg"> Receiver Email </div>
+    </div>
+    <div class="item">@Model.receiver</div>
+
+    <div class="wrapper">
+        <div class="bg"> Messager Email </div>
+        <div class="fg"> Messager Email </div>
+    </div>
+    <div class="item">@Model.messager</div>
+
+    <div class="wrapper">
+        <div class="bg"> Subject </div>
+        <div class="fg"> Subject </div>
+    </div>
+    <div class="item">@Model.subject</div>
+
+    <div class="wrapper">
+        <div class="bg"> Created DateTime</div>
+        <div class="fg"> Created DateTime </div>
+    </div>
+    <div class="item">@Model.createdtime</div>
+
+    <div class="wrapper">
+        <div class="bg"> Accepted </div>
+        <div class="fg"> Accepted </div>
+    </div>
+    @if (Model.accepted)
+    {
+        <div class="item">Accepted</div>
+    }
+    @if(!Model.accepted)
+    {
+        <div class="item"> Not Accepted</div>
+    }
+
+    <div class="wrapper" style="">
+        <div class="bg"> Message </div>
+        <div class="fg"> Message </div>
+    </div>
+    <div class="message">@Model.message</div>
+    
+  
+
+    <div style="place-content:center;">
+        @if (User.IsInRole("Registerer"))
+        {
+
+            <a asp-controller="Message" asp-action="Accept" asp-route-id="@Model.Id" class="btn btn-success" style="margin-top:20px;width:200px;border-radius:20px;margin-left:10px;color:black; border:2px solid lightgreen;" class="btn"> Accept</a>
+
+        }
+    
+
+    @if (User.IsInRole("Registerer"))
+    {
+        
+            <a asp-controller="Message" asp-action="Index" style="margin-top:20px;width:200px;border-radius:20px;margin-left:10px;color:bisque;background-color:black; border:2px solid #5D3FD3" class="btn"> Back To List</a>
+        
+    }
+    @if (!User.IsInRole("Registerer"))
+    {
+        
+            <a asp-controller="Message" asp-action="RequestIndex" style="margin-top:20px;width:200px;border-radius:20px;margin-left:10px;color:bisque;background-color:black; border:2px solid #5D3FD3" class="btn"> Back To List</a>
+        
+    }
+
+  
+    </div>
+
+
+</body>
+

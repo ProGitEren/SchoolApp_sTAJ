@@ -5,12 +5,14 @@
 <h2 style="color:#cf9e5d;">Remove Student</h2>
 <hr />
 
-<form asp-action="Delete" method="post" >
+
+
+<form asp-action="Delete" method="post">
     <input asp-for="Id" hidden/>
 
     <div class="form-group">
         <label style="color:bisque;margin-bottom:5px;" asp-for="Name" class="form-label">Student Name</label>
-        <input asp-for="Name" class="form-control" dsiabled />
+        <input asp-for="Name" class="form-control" disabled />
         
     </div>
 
@@ -45,16 +47,22 @@
         
     </div>
     <div style="margin-top:20px;space-between;">
-        <button type="submit"
+        @* <button type="submit"
                 class="btn btn-primary"
                 style="border-radius:5px;margin:auto;color:bisque">
             Delete
+        </button> *@
+        <button type="button" class="btn btn-primary" style="border-radius: 5px; margin-left: 10px; color: bisque;" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal" >
+            Delete
         </button>
-        <a asp-controller="Student" asp-action="Index" style="border-radius:5px;margin-left:10px;color:bisque;background-color:#707070;" class="btn">Back To List</a>
+        <a asp-controller="Student" asp-action="Index" style="border-radius:5px;margin-left:10px;color:bisque;background-color:#707070;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" class="btn">Back To List</a>
     </div>
 
+    <partial name="_DeleteConfirmation" />
 
 </form>
+
+
 
 <style>
     /* Apply styles to labels on hover */
@@ -71,6 +79,25 @@
     }
 
 </style>
+
+@* <script>
+    // Get a reference to the "Delete" button and the modal
+    var deleteButton = document.getElementById("deleteButton");
+    var modal = document.getElementById("confirmDeleteModal");
+
+    // Add a click event listener to the "Delete" button
+    deleteButton.addEventListener("click", function () {
+        // Show the modal
+        modal.style.display = "block";
+
+        // You may also need to add some JavaScript to handle modal dismissal
+        // For example, when the modal is closed using the "Close" button
+        var closeButton = modal.querySelector(".close");
+        closeButton.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+    });
+</script> *@
 
 
 

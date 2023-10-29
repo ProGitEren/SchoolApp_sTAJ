@@ -1,0 +1,85 @@
+﻿@model RequestViewModel
+
+<br>
+<br>
+<h2 style="color:#cf9e5d;">Request</h2>
+<hr />
+
+<form asp-action="Request" method="post">
+    <input asp-for="Id" hidden />
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Name" class="form-label">Registerer Name</label>
+        <input asp-for="Name" class="form-control" readonly />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Subject">Request Subject</label>
+        <input asp-for="Subject" class="form-control" type="comment" required />
+        <span asp-validation-for="Subject" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Message">Request Message</label>
+        <textarea asp-for="Message" id="auto-resize-textarea" class="form-control" style="overflow-y: hidden; word-wrap: break-word; min-height: 100px;" required></textarea>
+        <span asp-validation-for="Message" class="text-danger"></span>
+    </div>
+
+   
+    
+    <div style="margin-top:20px;space-between;">
+        <button type="submit"
+                class="btn btn-primary"
+                style="border-radius:5px;margin:auto;color:bisque">
+            Request
+        </button>
+        <a asp-controller="Contact" asp-action="Index" style="border-radius:5px;margin-left:10px;color:bisque;background-color:#707070;" class="btn">Back To List</a>
+    </div>
+
+
+</form>
+
+<style>
+    /* Apply styles to labels on hover */
+    .form-group input:hover {
+        background-color: #420d65 !important; /* Change this to your desired hover color */
+    }
+
+    .form-group select:hover {
+        background-color: #420d65 !important;
+    }
+
+    .form-select option:hover {
+        background-color: #420d65 !important;
+    }
+
+</style>
+
+<script>
+    // Get a reference to the textarea element
+    const textarea = document.getElementById('auto-resize-textarea');
+
+    // Set a minimum height for the textarea
+    const minHeight = 100;
+
+    // Add an event listener for input events (e.g., when the user types)
+    textarea.addEventListener('input', function () {
+        // Reset the textarea's height to its minimum height to properly calculate its scrollHeight
+        this.style.height = `${minHeight}px`;
+
+        // Adjust the textarea's height based on its scrollHeight
+        this.style.height = `${Math.max(minHeight, this.scrollHeight)}px`;
+    });
+</script>
+
+@section Scripts{
+
+    <partial name="_ValidationScriptsPartial" />
+
+}

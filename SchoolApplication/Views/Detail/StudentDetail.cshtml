@@ -1,0 +1,131 @@
+﻿@model Student
+
+
+<title>@Model.Name's Details</title>
+@* 
+<head>
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #ffb338;
+            --light-shadow: #77571d;
+            --dark-shadow: #3e2904;
+        }
+        }
+        body {
+            min-height: 100vh;         
+        }
+    /* Add your CSS styles for the page here */
+     .item{
+     --x: 50%;
+     --y: 50%;
+     width:100%;
+     height:20%;
+     margin-top:20px;
+     margin-bottom:20px;
+     padding:5px;
+     /* box-shadow:rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+     position: relative;
+     appearance: none;
+     padding: 0.8em 2em;
+     color: bisque;
+     font-size:20px;
+     cursor:auto;
+     outline: none;
+     border-radius: 100px;
+     border: 2px solid transparent;
+     background: linear-gradient(#000, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
+     }
+
+        .wrapper {
+            
+            display: grid;
+            grid-template-areas: 'overlap';
+            
+            text-transform: uppercase;
+            height: auto;
+        }
+
+            .wrapper > div {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: #363833;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 900;
+                font-size: clamp( 1em, 10vw, 2rem);
+                grid-area: overlap;
+                letter-spacing: 1px;
+                -webkit-text-stroke: 4px transparent;
+            }
+
+        div.bg {
+            background-image: repeating-linear-gradient( 105deg, var(--gold) 0%, var(--dark-shadow) 5%, var(--gold) 12%);
+            color: transparent;
+            filter: drop-shadow(5px 15px 15px black);
+            transform: scaleY(1.05);
+            transform-origin: top;
+        }
+
+        div.fg {
+            background-image: repeating-linear-gradient( 5deg, var(--gold) 0%, var(--light-shadow) 23%, var(--gold) 31%);
+            color: #1e2127;
+            transform: scale(1);
+        }
+
+</style>
+</head> *@  
+
+<body>
+
+    <div class="wrapper3">
+        <div class="bg3"> @Model.Name's Details </div>
+        <div class="fg3"> @Model.Name's Details </div>
+    </div>
+
+    <hr />
+  
+    <div class="wrapper">
+        <div class="bg"> Name </div>
+        <div class="fg"> Name </div>
+    </div>
+    <div class="item">@Model.Name</div>
+    <div class="wrapper">
+        <div class="bg"> Department </div>
+        <div class="fg"> Department </div>
+    </div>
+    <div class="item">@Model.Department</div>
+
+    <div class="wrapper">
+        <div class="bg"> Price To Pay </div>
+        <div class="fg"> Price To Pay </div>
+    </div>
+    <div class="item">@Model.Price</div>
+
+    <div class="wrapper">
+        <div class="bg"> Gpa </div>
+        <div class="fg"> Gpa </div>
+    </div>
+    <div class="item">@Model.Gpa</div>
+
+    <div class="wrapper2">
+        <div class="bg2"> Grades </div>
+        <div class="fg2"> Grades </div>
+    </div>
+    @foreach(var item in Model.Grades){
+    <div class="wrapper">
+        <div class="bg"> @item.Key </div>
+            <div class="fg"> @item.Key </div>
+    </div>
+    <div class="item">@item.Value</div>
+    }
+    <div style="place-content:center;">
+        <a asp-controller="Home" asp-action="Index" style="margin-top:20px;width:200px;border-radius:20px;margin-left:10px;color:bisque;background-color:black; border:2px solid #5D3FD3"> Back To Home Page</a>
+    </div>
+</body>
+
+
+

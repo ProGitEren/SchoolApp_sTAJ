@@ -230,6 +230,9 @@ namespace SchoolApplication.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
+                    b.Property<decimal>("Balance")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<DateTime>("CreatedTime")
                         .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("datetime2");
@@ -251,6 +254,10 @@ namespace SchoolApplication.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
+                    b.Property<decimal>("Balance")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("Student_Balance");
+
                     b.Property<DateTime>("CreatedTime")
                         .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("datetime2");
@@ -259,8 +266,17 @@ namespace SchoolApplication.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Discount")
-                        .HasColumnType("int");
+                    b.Property<decimal>("Discount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("History")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Language")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Math")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -271,6 +287,15 @@ namespace SchoolApplication.Migrations
                         .IsRequired()
                         .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Science")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Sports")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("expiredate")
                         .HasColumnType("datetime2");
@@ -282,6 +307,10 @@ namespace SchoolApplication.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
+                    b.Property<decimal>("Balance")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("Teacher_Balance");
+
                     b.Property<DateTime>("CreatedTime")
                         .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("datetime2");
@@ -295,6 +324,9 @@ namespace SchoolApplication.Migrations
                         .IsRequired()
                         .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("ProtectedSalary")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Type")
                         .HasColumnType("int");

@@ -7,21 +7,22 @@
 }
 <partial name="_Notification" />
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
+<div style="display: flex; justify-content: space-between; align-items: center;margin:10px;">
     <h3 class="text-warning">Teachers</h3>
     <a asp-controller="Teacher" asp-action="Create" class="btn btn-primary"> <i class="bi bi-person-plus"></i> &nbsp; New Teacher</a>
 </div>
 
+<hr />
 <div style="max-height:700px;overflow:scroll;">
     <table class="table table-bordered table-striped table-dark">
         <thead class="thead-dark">
             <tr>
-                <th class="text-primary">Name</th>
-                <th class="text-primary">Phone</th>
-                <th class="text-primary">Lecture</th>
-                <th class="text-primary">Email</th>
-                <th class="text-primary">Level</th>
-                <th class="text-primary"></th>
+                <th class="text-primary" style="border-right:inherit !important;">Name</th>
+                <th class="text-primary" style="border-right:inherit !important;">Phone</th>
+                <th class="text-primary" style="border-right:inherit !important;">Lecture</th>
+                <th class="text-primary" style="border-right:inherit !important;">Email</th>
+                <th class="text-primary" style="border-right:inherit !important;">Level</th>
+                <th class="text-primary" style="border-right:inherit !important;"></th>
             </tr>
         </thead>
 
@@ -32,15 +33,15 @@
             {
 
                 <tr>
-                    <td class="border-left text-info">@teacher.Name</td>
-                    <td class="border-left text-info">@teacher.Phone</td>
-                    <td class="border-left text-info">@teacher.lecture</td>
-                    <td class="border-left text-info">@teacher.Email</td>
-                    <td class="border-left text-info">@teacher.Type</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@teacher.Name</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@teacher.Phone</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@teacher.lecture</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@teacher.Email</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@teacher.Type</td>
                     <td>
                         <div class="w-75 btn-group" role="group">
-                            <a style="text-decoration:none;margin-right:15px; color:hsl(45, 47%, 57%); " asp-controller="Teacher" asp-action="Edit" asp-route-id="@teacher.Id"><i class="bi bi-pen"></i>Edit</a>
-                            <a style="text-decoration:none;" class="text-danger" asp-controller="Teacher" asp-action="Delete" asp-route-id="@teacher.Id"><i class="bi bi-trash2-fill"></i>Delete</a>
+                            <a style="text-decoration:none;margin-right:15px; color:hsl(45, 47%, 57%); " asp-controller="Teacher" asp-action="Edit" asp-route-id="@teacher.Id"><i class="bi bi-pen" style="margin-right:5px;"></i>Edit</a>
+                            <a style="text-decoration:none;" class="text-danger" asp-controller="Teacher" asp-action="Delete" asp-route-id="@teacher.Id"><i class="bi bi-trash2-fill" style="margin-right:5px;"></i>Delete</a>
                         </div>
                     </td>
 

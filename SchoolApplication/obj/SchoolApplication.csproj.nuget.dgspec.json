@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\SchoolApplication.csproj": {}
+    "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\SchoolApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\SchoolApplication.csproj": {
+    "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\SchoolApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\SchoolApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\SchoolApplication.csproj",
         "projectName": "SchoolApplication",
-        "projectPath": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\SchoolApplication.csproj",
-        "packagesPath": "C:\\Users\\egokmenler\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\obj\\",
+        "projectPath": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\SchoolApplication.csproj",
+        "packagesPath": "C:\\Users\\Eren Gökmenler\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\egokmenler\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eren Gökmenler\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,8 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -96,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

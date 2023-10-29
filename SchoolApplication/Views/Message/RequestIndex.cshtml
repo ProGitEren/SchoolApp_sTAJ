@@ -1,0 +1,65 @@
+﻿@using SchoolApplication.Messages
+@using Microsoft.AspNetCore.Identity
+@model List<MessageContainer>
+
+
+@{
+    ViewData["Title"] = "Messages";
+}
+<partial name="_Notification" />
+
+
+<br>
+<br>
+<div style="display: flex; justify-content: space-between; align-items:center;margin:10px;">
+    <h3 class="text-warning">Messages</h3>
+    <a asp-controller="Contact" asp-action="Index" class="btn btn-primary"> <i class="bi bi-person-plus"></i> &nbsp; New Message</a>
+</div>
+
+<hr />
+
+<div style="max-height:700px;overflow:scroll;">
+    <table class="table table-bordered table-striped table-dark">
+        <thead class="thead-dark">
+            <tr>
+                <th class="text-primary" style="border-right:inherit !important;">Receiver Email</th>
+                <th class="text-primary" style="border-right:inherit !important;">Subject</th>
+                <th class="text-primary" style="border-right:inherit !important;">Created Date</th>
+                <th class="text-primary" style="border-right:inherit !important;">Created Time</th>
+                <th class="text-primary" style="border-right:inherit !important;"></th>
+            </tr>
+        </thead>
+
+
+
+        <tbody>
+            @foreach (var messageitem in Model)
+            {
+
+                <tr>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@messageitem.receiver</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@messageitem.subject</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@messageitem.createdtime.ToString("yyyy-MM-dd")</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@messageitem.createdtime.ToString("HH:mm:ss")</td>
+
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            @if (messageitem.accepted)
+                            {
+                                <span style="text-decoration:none;margin-right:15px; color:hsl(45, 47%, 57%); " class="text text-success"><i class="bi bi-pen" style="margin-right:5px;"></i>Solved</span>
+                            }
+                            @if (!messageitem.accepted)
+                            {
+                                <span style="text-decoration:none;margin-right:15px; color:hsl(45, 47%, 57%); " class="text text-warning"><i class="bi bi-pen" style="margin-right:5px;"></i>Not Solved</span>
+                            }
+                            <a style="text-decoration:none;margin-right:15px; color:hsl(45, 47%, 57%); " asp-controller="Message" asp-action="Read" asp-route-id="@messageitem.Id"><i class="bi bi-pen" style="margin-right:5px;"></i>Read</a>
+                            <a style="text-decoration:none;" class="text-danger" asp-controller="Message" asp-action="Delete" asp-route-id="@messageitem.Id"><i class="bi bi-trash2-fill" style="margin-right:5px;"></i>Delete</a>
+                        </div>
+                    </td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>

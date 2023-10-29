@@ -1,0 +1,148 @@
+﻿
+@model CreateProductViewModel
+<br>
+<br>
+<h2 style="color:#cf9e5d;">New Product</h2>
+<hr />
+
+
+
+<form asp-controller="Product" asp-action="Create" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Title" class="form-label">Title</label>
+        <input asp-for="Title" class="form-control" required />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Description">Description</label>
+        <textarea asp-for="Description" id="auto-resize-textarea" class="form-control" style="overflow-y: hidden; word-wrap: break-word; min-height: 100px;" required></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Author" class="form-label">Author</label>
+        <input asp-for="Author" class="form-control" required />
+        <span asp-validation-for="Author" class="text-danger"></span>
+    </div>
+
+    
+    <div style="width:fit-content;height:10px;"></div>
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="ISBN" class="form-label">ISBN</label>
+        <input asp-for="ISBN" class="form-control" required />
+        <span asp-validation-for="ISBN" class="text-danger"></span>
+    </div>
+    <div style="width:fit-content;height:10px;"></div>
+    
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="ListPrice" class="form-label">ListPrice</label>
+        <input asp-for="ListPrice" type="number" min="0" step="5" value="5" class="form-control" required />
+        <span asp-validation-for="ListPrice" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Price" class="form-label">Price for 1-50</label>
+        <input asp-for="Price" type="number" min="0" step="5" value="5" class="form-control" required />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Price50" class="form-label">Price for 50+</label>
+        <input asp-for="Price50" type="number" min="0" step="5" value="5" class="form-control" required />
+        <span asp-validation-for="Price50" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Price100" class="form-label">Price for 100+</label>
+        <input asp-for="Price100" type="number" min="0" step="5" value="5" class="form-control" required />
+        <span asp-validation-for="Price100" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Quantity" class="form-label">Quantity</label>
+        <input asp-for="Quantity" type="number" min="0" step="10" value="5" class="form-control" required />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Lecture" class="form-label">Lecture</label>
+        <input asp-for="Lecture"class="form-control" required />
+        <span asp-validation-for="Lecture" class="text-danger"></span>
+    </div>
+
+    
+
+    <div style="width:fit-content;height:10px;"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="ImageFile" class="form-label">TextBook Cover Page</label>
+        <input type="file" asp-for="ImageFile" class="form-control" required />
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+
+    
+    <div style="margin-top:20px;">
+        <button type="submit"
+                class="btn btn-primary"
+                style="border-radius:5px;margin:auto;color:bisque">
+            Create
+        </button>
+        <a asp-controller="Product" asp-action="Index" style="border-radius:5px;margin-left:10px;color:bisque;background-color:#707070;" class="btn">Back To List</a>
+    </div>
+
+
+</form>
+
+<style>
+    /* Apply styles to labels on hover */
+    .form-group input:hover {
+        background-color: #420d65 !important; /* Change this to your desired hover color */
+    }
+
+    .form-group select:hover {
+        background-color: #420d65 !important;
+    }
+
+    .form-select option:hover {
+        background-color: #420d65 !important;
+    }
+
+</style>
+
+<script>
+    // Get a reference to the textarea element
+    const textarea = document.getElementById('auto-resize-textarea');
+
+    // Set a minimum height for the textarea
+    const minHeight = 100;
+
+    // Add an event listener for input events (e.g., when the user types)
+    textarea.addEventListener('input', function () {
+        // Reset the textarea's height to its minimum height to properly calculate its scrollHeight
+        this.style.height = `${minHeight}px`;
+
+        // Adjust the textarea's height based on its scrollHeight
+        this.style.height = `${Math.max(minHeight, this.scrollHeight)}px`;
+    });
+</script>
+
+@section Scripts{
+
+    <partial name="_ValidationScriptsPartial" />
+
+}

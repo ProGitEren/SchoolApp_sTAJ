@@ -13,5 +13,7 @@ namespace SchoolApplication.Models
 
         [Required]
         public string Phone { get; set; }
+
+    
     }
 }

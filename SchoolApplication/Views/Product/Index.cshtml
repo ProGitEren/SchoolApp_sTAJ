@@ -1,0 +1,57 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "Product";
+}
+<partial name="_Notification" />
+
+<div style="display: flex; justify-content: space-between; align-items:center;margin:10px;">
+    <h3 class="text-warning">Products</h3>
+    <a asp-controller="Product" asp-action="Create" class="btn btn-primary"> <i class="bi bi-person-plus"></i> &nbsp; New Product</a>
+</div>
+
+<hr />
+
+<div style="max-height:700px;overflow:scroll;">
+<table class="table table-bordered table-striped table-dark">
+    <thead class="thead-dark">
+        <tr >
+                <th class="text-primary" style="border-right:inherit !important;">Title</th>
+                <th class="text-primary" style="border-right:inherit !important;">Image</th>
+                <th class="text-primary" style="border-right:inherit !important;">Author</th>
+                <th class="text-primary" style="border-right:inherit !important;">ISBN</th>
+                <th class="text-primary" style="border-right:inherit !important;">Price</th>
+                <th class="text-primary" style="border-right:inherit !important;">Lecture</th>
+                
+                <th class="text-primary" style="border-right:inherit !important;"></th>
+        </tr>
+    </thead>
+    
+    
+    
+    <tbody>
+        @foreach (var product in Model)
+        {
+               
+            <tr>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@product.Title</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;"><img src="@product.ImagePath" style="width:130px;height:150px;" /></td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@product.Author</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@product.ISBN</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@product.ListPrice</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@product.Lecture</td>
+                    
+                   
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                            <a style="text-decoration:none;margin-right:15px; color:hsl(45, 47%, 57%); " asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id"><i class="bi bi-pen" style="margin-right:5px;"></i>Edit</a>
+                            <a style="text-decoration:none;" class="text-danger" asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id"><i class="bi bi-trash2-fill" style="margin-right:5px;"></i>Delete</a>
+                    </div>
+                </td>
+                
+            </tr>
+            
+        }
+    </tbody>
+</table>
+</div>

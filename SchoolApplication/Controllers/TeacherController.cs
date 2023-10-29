@@ -196,7 +196,7 @@ namespace SchoolApplication.Controllers
                         throw new Exception("Invalid teacher level!!");
 
                 }
-
+                
                 var result = await _userManager.UpdateAsync(teacher);
                 if (result.Succeeded)
                 {

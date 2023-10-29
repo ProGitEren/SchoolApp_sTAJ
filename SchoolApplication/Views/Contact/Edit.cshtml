@@ -1,0 +1,67 @@
+﻿
+@model RegistererUpdateViewModel
+
+<br>
+<br>
+<h2 style="color:#cf9e5d;">Update Registerer</h2>
+<hr />
+
+<form asp-action="Edit" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Name" class="form-label">Registerer Name</label>
+        <input asp-for="Name" class="form-control" required />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    
+
+    <div style="width:fit-content;height:10px;"></div>
+
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="Phone">Phone</label>
+        <input asp-for="Phone" class="form-control" type="tel" required pattern="0\d{3}-\d{3}-\d{2}-\d{2}"
+               title="Please enter a valid phone number starting with '0' in the format 0XXX-XXX-XX-XX" placeholder="0555-555-55-55" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="email">Email</label>
+        <input asp-for="email" class="form-control" type="email" required />
+        <span asp-validation-for="email" class="text-danger"></span>
+    </div>
+    <div style="margin-top:20px;space-between;">
+        <button type="submit"
+                class="btn btn-primary"
+                style="border-radius:5px;margin:auto;color:bisque">
+            Update
+        </button>
+        <a asp-controller="Contact" asp-action="Index" style="border-radius:5px;margin-left:10px;color:bisque;background-color:#707070;" class="btn">Back To List</a>
+    </div>
+
+
+</form>
+
+<style>
+    /* Apply styles to labels on hover */
+    .form-group input:hover {
+        background-color: #420d65 !important; /* Change this to your desired hover color */
+    }
+
+    .form-group select:hover {
+        background-color: #420d65 !important;
+    }
+
+    .form-select option:hover {
+        background-color: #420d65 !important;
+    }
+
+</style>
+
+
+
+@section Scripts{
+
+    <partial name="_ValidationScriptsPartial" />
+
+}

@@ -9,7 +9,16 @@
 
 
 <form asp-action="TeacherLogin" method="post">
+
+    @if (Model.logintrial > 0 && Model.logintrial < 4)
+    {
+
+    <div style="background-color:transparent;color:gold;margin:auto;" class="alert alert-warning">You have @Model.logintrial trials left!! </div>
+    }
+
     <div asp-validation-summary="All" class="text-danger"></div>
+   
+
     <div class="form-group">
         <label style="color:bisque;margin-bottom:5px;" asp-for="UserName">Username</label>
         <input asp-for="UserName" type="text" class="form-control" required />
@@ -28,7 +37,7 @@
         </div>
         <span asp-validation-for="Password" class="text-danger"></span>
     </div>
-
+    <a asp-controller="Change" asp-action="ChangePassword" asp-route-role="Teacher"> Change Password </a>
     <div style="margin-top:20px;">
         <button type="submit"
                 class="btn btn-primary"

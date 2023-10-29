@@ -1,0 +1,127 @@
+﻿@model ChangePasswordViewModel
+
+<br>
+<br>
+<h2 style="color:#cf9e5d;">Change Password</h2>
+<hr />
+
+
+<form asp-action="EmailVerified" method="post">
+  <input type="hidden" asp-for="Id" />
+  <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="oldPassword">Old Password</label>
+        <div class="input-group">
+            <input asp-for="oldPassword" type="password" class="form-control" id="passwordInputold" required />
+            <div class="input-group-append">
+                <button style="border-color:#7c5a2c;background-color:#30115e;box-shadow:2px 2px 2px inherit;margin:0;" class="btn btn-outline-secondary " type="button" id="showPasswordButtonold">
+                    <i class="bi bi-eye-slash"></i>
+                </button>
+            </div>
+        </div>
+
+        <span asp-validation-for="oldPassword" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="newPassword">New Password</label>
+        <div class="input-group">
+            <input asp-for="newPassword" type="password" class="form-control" id="passwordInput" required />
+            <div class="input-group-append">
+                <button style="border-color:#7c5a2c;background-color:#30115e;box-shadow:2px 2px 2px inherit;margin:0;" class="btn btn-outline-secondary " type="button" id="showPasswordButton">
+                    <i class="bi bi-eye-slash"></i>
+                </button>
+            </div>
+        </div>
+
+        <span asp-validation-for="newPassword" class="text-danger"></span>
+    </div>
+
+    <div style="width:fit-content;height:10px;"></div>
+
+    <div class="form-group">
+        <label style="color:bisque;margin-bottom:5px;" asp-for="newConfirmPassword">Confirm Password</label>
+        <div class="input-group">
+            <input asp-for="newConfirmPassword" type="password" class="form-control" id="confirmpasswordInput" required />
+            <div class="input-group-append">
+                <button style="border-color:#7c5a2c;background-color: #30115e;box-shadow:2px 2px 2px inherit;margin:0;" class="btn btn-outline-secondary " type="button" id="confirmshowPasswordButton">
+                    <i class="bi bi-eye-slash"></i>
+                </button>
+                
+            </div>
+        </div>
+        <span asp-validation-for="newConfirmPassword" class="text-danger"></span>
+    </div>
+
+    <div style="margin-top:20px;">
+        <button type="button" class="btn btn-primary" style="border-radius: 5px; margin-left: 10px; color: bisque;" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+            Change
+        </button>
+        <a asp-controller="Home" asp-action="Index" style="border-radius:5px;margin-left:10px;color:bisque;background-color:#707070;" class="btn">Back To Home Page</a>
+    </div>
+    
+    <partial name="_ChangePasswordConfirmation"/>
+
+</form>
+
+<style>
+    /* Apply styles to labels on hover */
+    .form-group input:hover{
+        background-color: #420d65 !important; /* Change this to your desired hover color */
+    }
+    .form-group select:hover{
+        background-color: #420d65 !important;
+    }
+    .form-select option:hover{
+        background-color: #420d65 !important;
+    }
+
+    </style>
+
+<script>
+    const passwordInput = document.getElementById('passwordInput');
+    const showPasswordButton = document.getElementById('showPasswordButton');
+
+    showPasswordButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+        } else {
+            passwordInput.type = 'password';
+        }
+    });
+</script>
+<script>
+    const confrimpasswordInput = document.getElementById('confirmpasswordInput');
+    const confirmshowPasswordButton = document.getElementById('confirmshowPasswordButton');
+
+    confirmshowPasswordButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (confirmpasswordInput.type === 'password') {
+            confirmpasswordInput.type = 'text';
+        } else {
+            confirmpasswordInput.type = 'password';
+        }
+    });
+</script>
+
+<script>
+    const oldpasswordInput = document.getElementById('passwordInputold');
+    const oldshowPasswordButton = document.getElementById('showPasswordButtonold');
+
+    oldshowPasswordButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (oldpasswordInput.type === 'password') {
+            oldpasswordInput.type = 'text';
+        } else {
+            oldpasswordInput.type = 'password';
+        }
+    });
+</script>
+
+@section Scripts{
+
+<partial name="_ValidationScriptsPartial" />
+}

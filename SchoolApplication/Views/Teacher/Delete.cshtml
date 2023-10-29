@@ -47,14 +47,12 @@
     </div>
     
     <div style="margin-top:20px;space-between;">
-        <button type="submit"
-                class="btn btn-primary"
-                style="border-radius:5px;margin:auto;color:bisque">
+        <button type="button" class="btn btn-primary" style="border-radius: 5px; margin-left: 10px; color: bisque;" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
             Delete
         </button>
         <a asp-controller="Teacher" asp-action="Index" style="border-radius:5px;margin-left:10px;color:bisque;background-color:#707070;" class="btn">Back To List</a>
     </div>
-
+    <partial name="_DeleteConfirmationTeacher"/>
 
 </form>
 

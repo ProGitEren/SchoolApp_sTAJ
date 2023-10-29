@@ -1,0 +1,93 @@
+﻿@using SchoolApplication.Data.Money
+@model Product
+
+<style>
+    .image-container {
+        text-align: center; /* Center image horizontally */
+        /* background-color: black; /* Dark background color */ */
+        padding: 20px; /* Optional padding for spacing */
+        
+        
+    }
+
+    .product-image {
+        display: block; /* Remove any default spacing */
+        margin: 0 auto; /* Center image horizontally */
+        padding:25px;
+        width:25%;
+        height:25%;
+        background-color:black;
+        border-radius:30px;
+    }
+</style>
+
+<title>Product Details</title>
+
+<body>
+
+    <div class="wrapper3">
+        <div class="bg3"> @Model.Title </div>
+        <div class="fg3"> @Model.Title </div>
+    </div>
+    
+    <hr />
+    <div class="image-container">
+        <img src="@Model.ImagePath" alt="Product Image" class="product-image" >
+    </div>
+
+    <div class="wrapper">
+        <div class="bg"> Author </div>
+        <div class="fg"> Author </div>
+    </div>
+    <div class="item">@Model.Author</div>
+    <div class="wrapper">
+        <div class="bg"> Description </div>
+        <div class="fg"> Description </div>
+    </div>
+    <div class="item">@Model.Description</div>
+
+    <div class="wrapper">
+        <div class="bg"> Lecture </div>
+        <div class="fg"> Lecture </div>
+    </div>
+    <div class="item">@Model.Lecture</div>
+
+    <div class="wrapper">
+        <div class="bg"> List Price </div>
+        <div class="fg"> List Price </div>
+    </div>
+    <div class="item">@Model.ListPrice</div>
+
+    <div class="wrapper">
+        <div class="bg"> Price </div>
+        <div class="fg"> Price </div>
+    </div>
+    <div class="item">@Model.Price</div>
+
+    <div class="wrapper">
+        <div class="bg"> Price50 </div>
+        <div class="fg"> Price50 </div>
+    </div>
+    <div class="item">@Model.Price50</div>
+
+    <div class="wrapper">
+        <div class="bg"> Price100 </div>
+        <div class="fg"> Price100 </div>
+    </div>
+    <div class="item">@Model.Price100</div>
+    <div class="wrapper">
+        <div class="bg"> Quantity </div>
+        <div class="fg"> Quantity </div>
+    </div>
+    <div class="item">@Model.Quantity</div>
+ 
+
+    <div style="place-content:center;">
+        <a asp-controller="Product" asp-action="Index_Shop" style="margin-top:20px;width:200px;border-radius:20px;margin-left:10px;color:bisque;background-color:black; border:2px solid #5D3FD3" class="btn"> Back To List</a>
+    </div>
+
+
+
+</body>
+
+

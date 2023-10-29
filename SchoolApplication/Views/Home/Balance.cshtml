@@ -1,0 +1,57 @@
+﻿@* @using Microsoft.AspNetCore.Identity
+@model ApplicationUser
+
+<br>
+<br>
+<h2 style="color:#cf9e5d;">Update Balance</h2>
+<hr />
+
+<form asp-action="Balance" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    @if (Model is Teacher)
+    {
+        
+        <div class="form-group">
+            <label style="color:bisque;margin-bottom:5px;" asp-for="Balance" class="form-label">Registerer Name</label>
+        <input asp-for="Name" class="form-control" required />
+        <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    }
+    
+
+    
+    <div style="margin-top:20px;space-between;">
+        <button type="submit"
+                class="btn btn-primary"
+                style="border-radius:5px;margin:auto;color:bisque">
+            Update
+        </button>
+        <a asp-controller="Contact" asp-action="Index" style="border-radius:5px;margin-left:10px;color:bisque;background-color:#707070;" class="btn">Back To List</a>
+    </div>
+
+
+</form>
+
+<style>
+    /* Apply styles to labels on hover */
+    .form-group input:hover {
+        background-color: #420d65 !important; /* Change this to your desired hover color */
+    }
+
+    .form-group select:hover {
+        background-color: #420d65 !important;
+    }
+
+    .form-select option:hover {
+        background-color: #420d65 !important;
+    }
+
+</style>
+
+
+
+@section Scripts{
+
+    <partial name="_ValidationScriptsPartial" />
+
+} *@

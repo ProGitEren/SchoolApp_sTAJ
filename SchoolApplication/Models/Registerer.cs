@@ -38,7 +38,7 @@ namespace SchoolApplication.Models
 
         }
 
-        public void AssignPriceToStudent(Student student) 
+        public void AssignPriceToStudent(Student  student) 
         {
             decimal departmentPrice = 0;
 
@@ -78,7 +78,7 @@ namespace SchoolApplication.Models
                     throw new ArgumentException("Invalid Department.");
 
             }
-            decimal finalPrice = departmentPrice * ((100 - student.Discount) / 100);
+            decimal finalPrice = departmentPrice * ((100m - student.Discount) / 100m);
             student.SetPrice(finalPrice);
             
 
@@ -95,6 +95,6 @@ namespace SchoolApplication.Models
         [Required]
         public Dictionary<Teacher, decimal> salary;
 
-        
+        public decimal Balance { get; set; } = 0;
     }
 }

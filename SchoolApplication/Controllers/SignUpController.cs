@@ -1,10 +1,14 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SchoolApplication.Models;
 using SchoolApplication.Models.ViewModels;
 
 namespace SchoolApplication.Controllers
+
+
 {
+    [Authorize(Roles = "Registerer")]
     public class SignUpController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -83,8 +87,8 @@ namespace SchoolApplication.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    TempData["success"] = "Registerer successfully created";
                     await _userManager.AddToRoleAsync(user, "Registerer");
+                    TempData["success"] = "Registerer successfully created and assigned to Registerer Role";
                     return RedirectToAction("Index", "Home");
                 }
                

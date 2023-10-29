@@ -1,3 +1,4 @@
+using Hangfire;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SchoolApplication.Data;
@@ -6,48 +7,75 @@ using static System.Formats.Asn1.AsnWriter;
 //using Hangfire;
 //using Hangfire.SqlServer;
 //using System.Configuration;
-//using SchoolApplication.Expire;
+using SchoolApplication.Expire;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ObjectDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
 builder.Services.AddDbContext<ApplicationDbContext>(options=>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.Name = "AspNetCore.Identity.Application";
+    options.LoginPath = "/Login/GeneralLogin"; // Set the login path
+    options.AccessDeniedPath = "/Login/AccessDenied"; // Set the access denied path
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+    options.SlidingExpiration = true;
+
+});
+
+
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
+    
     options.Password.RequireDigit = true;
     options.Password.RequireLowercase = true;
     options.Password.RequireUppercase = true;
     options.Password.RequireNonAlphanumeric = true;
     options.Password.RequiredLength = 5;
 });
-//builder.Services.AddHangfireServer();
 
-//builder.Services.AddScoped<StudentService>();
 
-////HangFire These are to check every day a student expiretime is passing the current time and it will be doing the action CheckAndDeleteExpiredStudents
-//// Add Hangfire services
-//builder.Services.AddHangfire(configuration => configuration
-//    .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
-//    .UseSimpleAssemblyNameTypeSerializer()
-//    .UseRecommendedSerializerSettings()
-//    .UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection")));
-//// Add the recurring job to check and delete expired students
+//builder.Services.AddScoped<CustomAuthenticationFilter>();
 
-//RecurringJob.AddOrUpdate<StudentService>(x => x.CheckAndDeleteExpiredStudents(), "30 17 * * *");
-
-builder.Services.AddAuthentication().AddCookie(options => 
+builder.Services.AddHangfire(x => 
 {
-    //expire time for the authentication process
-    options.ExpireTimeSpan = TimeSpan.FromSeconds(20);
-    //every time a authenticated user makes a process the expire time is resetted
-    options.SlidingExpiration = true;
+    x.UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection"));
+    RecurringJob.AddOrUpdate<StudentService>(j => j.CheckAndDeleteExpiredStudents(), "30 17 * * *");
+
 });
+
+builder.Services.AddHangfireServer();
+
+builder.Services.AddDistributedMemoryCache(); // Use an appropriate cache provider
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(10); // Set the session timeout as needed
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+
+//builder.Services.AddAuthentication().AddCookie(options => 
+//{
+//    //expire time for the authentication process
+//    options.ExpireTimeSpan = TimeSpan.FromSeconds(20);
+//    //every time a authenticated user makes a process the expire time is resetted
+//    options.SlidingExpiration = true;
+//});
 
 var app = builder.Build();
 
@@ -92,21 +120,26 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-  
+//app.UseStatusCodePages(async context =>
+//{
+//    var response = context.HttpContext.Response;
+
+//    if (response.StatusCode == (int)HttpStatusCode.Unauthorized ||
+//            response.StatusCode == (int)HttpStatusCode.Forbidden)
+//        response.Redirect("/Login");
+//});
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-//// UseHangfire middleware (before any middleware that might enqueue jobs)
 
-
-//// ... (other middleware)
-
-//// UseHangfireDashboard middleware (after app.UseHangfire)
-//app.UseHangfireDashboard();
 
 app.UseRouting();
 
+app.UseSession();
+
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseHangfireDashboard();
 
 
 

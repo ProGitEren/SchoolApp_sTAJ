@@ -1,0 +1,71 @@
+﻿@model List<Registerer?>
+
+@if (!User.IsInRole("Registerer"))
+{
+    <br>
+    <br>
+    <h2 style="color:#cf9e5d;">Registerers For Contact</h2>
+    <hr />
+}
+
+@{
+    ViewData["Title"] = "Contacts";
+}
+<partial name="_Notification" />
+
+@if (User.IsInRole("Registerer"))
+{
+    <div style="display: flex; justify-content: space-between; align-items:center;margin:10px;">
+        <h3 class="text-warning">Registerers For Contact</h3>
+        <a asp-controller="SignUp" asp-action="RegistererSignUp" class="btn btn-primary"> <i class="bi bi-person-plus"></i> &nbsp; New Registerer</a>
+    </div>
+}
+
+<div style="max-height:700px;overflow:scroll;">
+    <table class="table table-bordered table-striped table-dark">
+        <thead class="thead-dark">
+            <tr>
+                <th class="text-primary" style="border-right:inherit !important;">Name</th>              
+                <th class="text-primary" style="border-right:inherit !important;">Email</th>
+                <th class="text-primary" style="border-right:inherit !important;">Phone</th>
+                <th class="text-primary" style="border-right:inherit !important;"></th>
+            </tr>
+        </thead>
+
+
+
+        <tbody>
+            @foreach (var registerer in Model)
+            {
+
+                <tr>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@registerer.Name</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@registerer.Email</td>
+                    <td class="border-left text-info" style="border-right:inherit !important;">@registerer.Phone</td>
+                    @if (User.IsInRole("Registerer"))
+                    {
+                        <td>
+                            <div class="w-75 btn-group" role="group">
+                                <a style="text-decoration:none;margin-right:15px; color:hsl(45, 47%, 57%); " asp-controller="Contact" asp-action="Edit" asp-route-id="@registerer.Id"><i class="bi bi-pen" style="margin-right:5px;"></i>Edit</a>
+                                @if(User.Identity.Name != registerer.UserName)
+                                {
+                                    <a style="text-decoration:none;" class="text-danger" asp-controller="Contact" asp-action="Delete" asp-route-id="@registerer.Id"><i class="bi bi-trash2-fill" style="margin-right:5px;"></i>Delete</a>
+                                }
+                            </div>
+                        </td>
+                    }
+                    @if (User.IsInRole("Teacher") || User.IsInRole("Student"))
+                    {
+                        <td>
+                            <div class="w-75 btn-group" role="group">
+                                <a style="text-decoration:none;margin-right:15px; color:hsl(45, 47%, 57%); " asp-controller="Contact" asp-action="Request" asp-route-id="@registerer.Id"><i class="bi bi-envelope" style="margin-right:5px;"></i>Request</a>
+                            </div>
+                        </td>
+                    }
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>

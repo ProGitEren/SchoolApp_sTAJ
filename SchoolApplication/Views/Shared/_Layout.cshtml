@@ -10,10 +10,16 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SchoolApplication.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/ErenTheme,.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    @* <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script> *@
+    @* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script> *@
+    
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-outline-primary" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-outline-primary" @* style="margin-top:10px;" *@ data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                     <img src="~/Images/logoeren.png" alt="SchoolAppLogo" width="30" height="30" class="d-inline-block align-text-top">
@@ -22,72 +28,171 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <div class="collapse navbar-collapse" id="navbarColor02">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item-eren">
-                            <a  asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
+                       @*  @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
                         {
                             <li class="nav-item-eren">
                                 <a class="nav-link text-outline-primary" asp-area="" asp-controller="Student" asp-action="Index">Student</a>
                             </li>
-                        }
-                        @if (!User.Identity.IsAuthenticated)
+                        } *@
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Student"))
                         {
                             <li class="nav-item-eren">
-                                <a asp-area="" asp-controller="Login" asp-action="StudentLogin">Student Login</a>
+                                <a asp-area="" asp-controller="Detail" asp-action="StudentDetail" asp-route-name="@User.Identity.Name">Your Details</a>
                             </li>
+
+                        }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Teacher"))
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Detail" asp-action="TeacherDetail">Your Details</a>
+                            </li>
+
                         }
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
                         {
                             <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Detail" asp-action="SchoolDetail">School Details</a>
+                            </li>
+
+                        }
+                       
+                        
+                       @*  @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Login" asp-action="StudentLogin">Student Login</a>
+                            </li>
+                        } *@
+                       @*  @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
+                        {
+                            <li class="nav-item-eren">
                                 <a asp-area="" asp-controller="SignUp" asp-action="RegistererSignUp">Registerer Sign Up</a>
                             </li>
-                        }
+                        } *@
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Teacher"))
                         {
                             <li class="nav-item-eren">
                                 <a asp-area="" asp-controller="Grade" asp-action="Index">Grades</a>
                             </li>
                         }
-                        @if (!User.Identity.IsAuthenticated)
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @if (User.IsInRole("Registerer"))
+                            {
+                                <li class="nav-item-eren">
+                                    <a asp-area="" asp-controller="Contact" asp-action="Index">Registerers</a>
+                                </li>
+                            }
+                            @if (!User.IsInRole("Registerer"))
+                            {
+                                <li class="nav-item-eren">
+                                    <a asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                                </li>
+                            }
+
+                        }
+                       @*  @if (!User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item-eren">
                                 <a asp-area="" asp-controller="Login" asp-action="RegistererLogin">Registerer Login</a>
                             </li>
-                        }
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li class="nav-item-eren">
-                                <a asp-area="" asp-controller="SignOut" asp-action="Logout">Sign Out</a>
-                            </li>
-                        }
-                        @if (!User.Identity.IsAuthenticated)
+                        } *@
+                       
+                       @*  @if (!User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item-eren">
                                 <a asp-area="" asp-controller="Login" asp-action="TeacherLogin">Teacher Login</a>
+                            </li>
+                        } *@
+                        @* @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Teacher" asp-action="Index">Teacher</a>
+                            </li>
+                        } *@
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
+                        {
+                            <li class="nav-item-eren-dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tables</a>
+
+                                <div class="dropdown-menu-eren">
+
+                                <a asp-area="" asp-controller="Student" asp-action="Index">Student</a>
+
+                                <a asp-area="" asp-controller="Teacher" asp-action="Index">Teacher</a>
+
+
+                                </div>
+
+                            </li>
+                        }
+                         @if (!User.Identity.IsAuthenticated)
+                            {
+                            <li class="nav-item-eren-dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
+
+                                <div class="dropdown-menu-eren">
+
+                                    <a asp-area="" asp-controller="Login" asp-action="RegistererLogin">Registerer Login</a>
+
+                                    <a asp-area="" asp-controller="Login" asp-action="TeacherLogin">Teacher Login</a>
+
+                                    <a asp-area="" asp-controller="Login" asp-action="StudentLogin">Student Login</a>
+
+
+                                </div>
+
+                            </li>
+                            }
+
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Message" asp-action="Index">Messages</a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated && (!User.IsInRole("Registerer")))
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Message" asp-action="RequestIndex">Requests</a>
                             </li>
                         }
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Registerer"))
                         {
                             <li class="nav-item-eren">
-                                <a asp-area="" asp-controller="Teacher" asp-action="Index">Teacher</a>
+                                <a asp-area="" asp-controller="Product" asp-action="Index">Products</a>
                             </li>
                         }
-                        <li class="nav-item-eren">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                        </li>
+                        @if (User.Identity.IsAuthenticated && !User.IsInRole("Registerer"))
+                        {
+                            <li class="nav-item-eren">
+                                <a asp-area="" asp-controller="Product" asp-action="Index_Shop">Products</a>
+                            </li>
+                        }
+
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="search" placeholder="Search">
+                    <div class="ml-auto " style="padding:10px;">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <span class="nav-item-eren">
+                                <a asp-area="" asp-controller="Home" asp-action="Balance">Wallet</a>
+                            </span>
+                        }
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <span class="nav-item-eren">
+                                <a asp-area="" asp-controller="SignOut" asp-action="Logout">Sign Out</a>
+                            </span>
+                        }
+                    </div>
+                    <form class="d-flex" method="get" asp-action="Search" asp-controller="Home">
+                        <input class="form-control me-sm-2" type="search" name="SearchQuery" placeholder="Search">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>

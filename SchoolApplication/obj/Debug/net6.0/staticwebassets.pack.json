@@ -1,271 +1,283 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SchoolApplication.bundle.scp.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SchoolApplication.bundle.scp.css",
       "PackagePath": "staticwebassets\\SchoolApplication.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\Images\\SchoolAppLogo.png",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\Images\\SchoolAppLogo.png",
       "PackagePath": "staticwebassets\\Images\\SchoolAppLogo.png"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\Images\\Wolf.jpg",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\Images\\Wolf.jpg",
       "PackagePath": "staticwebassets\\Images\\Wolf.jpg"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\Images\\logoeren.png",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\Images\\c7cfe67d-5ff8-4bc7-8682-4ff70d00dfa8_Image_3.jpg",
+      "PackagePath": "staticwebassets\\Images\\c7cfe67d-5ff8-4bc7-8682-4ff70d00dfa8_Image_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\Images\\d26f827d-8f07-4144-a22a-4cd403a15cc1_image_4.jpg",
+      "PackagePath": "staticwebassets\\Images\\d26f827d-8f07-4144-a22a-4cd403a15cc1_image_4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\Images\\image2.png",
+      "PackagePath": "staticwebassets\\Images\\image2.png"
+    },
+    {
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\Images\\logoeren.png",
       "PackagePath": "staticwebassets\\Images\\logoeren.png"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\css\\Boots.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\css\\Boots.css",
       "PackagePath": "staticwebassets\\css\\Boots.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\css\\Bootstraptheme.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\css\\Bootstraptheme.css",
       "PackagePath": "staticwebassets\\css\\Bootstraptheme.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\css\\ErenTheme,.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\css\\ErenTheme,.css",
       "PackagePath": "staticwebassets\\css\\ErenTheme,.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\egokmenler\\source\\repos\\SchoolApplication\\SchoolApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\Eren Gökmenler\\source\\repos\\SchoolApp_sTAJ\\SchoolApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

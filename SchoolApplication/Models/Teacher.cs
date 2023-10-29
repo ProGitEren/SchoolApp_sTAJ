@@ -43,9 +43,9 @@ namespace SchoolApplication.Models
         
         public void setGrade(Student student, decimal newgrade) 
         {
-            if (student.GetGrades().ContainsKey(lecture.ToString()))
+            if (student.Grades.ContainsKey(lecture.ToString()))
             {
-                student.GetGrades()[lecture.ToString()] = newgrade;
+                student.Grades[lecture.ToString()] = newgrade;
             }
             else 
             {
@@ -58,13 +58,16 @@ namespace SchoolApplication.Models
         public decimal ProtectedSalary 
         {
             get { return _privateSalary; }
-           
+            internal set { _privateSalary = value; }
+
         }
 
         internal void SetSalary(decimal newSalary) 
         {
             _privateSalary = newSalary;
         }
-  
+
+        public decimal Balance { get; set; } = 0;
+
     }
 }

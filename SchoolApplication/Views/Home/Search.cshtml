@@ -1,0 +1,246 @@
+﻿@using SchoolApplication.Messages;
+@using  Microsoft.AspNetCore.Identity;
+@model SearchViewModel
+
+@{
+    ViewBag.Title = "Search Results";
+}
+
+<br>
+<br>
+<h2 style="color:#cf9e5d;">Search Results</h2>
+<hr />
+
+@* <div class="search-results">
+    @if (Model.SearchResults != null && Model.SearchResults.Any())
+    {
+      
+        <ul>
+            @foreach (var result in Model.SearchResults)
+            {
+                @if (result is IdentityUser user)
+                {
+                    if (user is Teacher teacher)
+                    {
+                        <li>Teacher: @teacher.Name</li>
+                        <li>Email: @teacher.Email</li>
+                        <li>Phone: @teacher.Phone</li>
+                        <li>Level Of Education: @teacher.Type.ToString()</li>
+                        <li>Lecture Type: @teacher.lecture.ToString()</li>
+                    }
+                    else if (user is Student student)
+                    {
+                        <li>Student: @student.Name</li>
+                        <li>Email: @student.Email</li>
+                        <li>Phone: @student.Phone</li>
+                        <li>Department: @student.Department</li> 
+                    }
+                    else if (user is Registerer registerer)
+                    {
+                        <li>Registerer: @registerer.Name</li>
+                        <li>Email: @registerer.Email</li>
+                        <li>Phone: @registerer.Phone</li>
+                    }
+                }
+                else if (result is Teacher teacher)
+                {
+                    <li>Teacher: @teacher.Name</li>
+                    <li>Email: @teacher.Email</li>
+                    <li>Phone: @teacher.Phone</li>
+                    <li>Level Of Education: @teacher.Type.ToString()</li>
+                    <li>Lecture Type: @teacher.lecture.ToString()</li>
+                }
+                else if (result is Student student)
+                {
+                    <li>Student: @student.Name</li>
+                    <li>Email: @student.Email</li>
+                    <li>Phone: @student.Phone</li>
+                    <li>Department: @student.Department</li>
+                }
+                else if (result is Registerer registerer)
+                {
+                    <li>Registerer: @registerer.Name</li>
+                    <li>Email: @registerer.Email</li>
+                    <li>Phone: @registerer.Phone</li>
+                }
+                else if (result is MessageContainer messageContainer)
+                {
+                    <li>Message: @messageContainer.message</li>
+                    <li>Messager: @messageContainer.messager</li>
+                    <li>Receiver: @messageContainer.receiver</li>
+                    <li>Created Date: @messageContainer.createdtime.ToString("yyyy-MM-dd")</li>
+                    <li>Created Date: @messageContainer.createdtime.ToString("HH:mm:ss")</li>
+                }
+                
+            }
+        </ul>
+    }
+    else
+    {
+        <div style="background-color:transparent;color:red;" class="alert alert-danger">No results found!</div>
+    }
+</div> *@
+
+@if (Model.SearchResults != null && Model.SearchResults.Any())
+{
+    <div class="container">
+        <div class="row" style="display:flex;flex-wrap: wrap;">
+            @foreach (var result in Model.SearchResults)
+            {
+                <div class="col-md-3 mb-4" style="flex:1;margin-bottom:15px;" >
+                    <div class="card text-white bg-dark d-flex flex-column h-100">
+                        
+                            @if (result is IdentityUser user)
+                            {
+
+                                if (user is Teacher teacher)
+                                {
+                                    <div class="card-header" style="background-color:black !important;text-align: center;font-size: 24px;">
+                                    <span style="color: #633f4a;">Teacher</span>
+                                    </div>
+                                    <div class="card-body flex-fill" >
+                                        <h5 class="card-title">@teacher.Name</h5>
+                                        <ul class="modern-list">
+
+                                            <li>Email: @teacher.Email</li>
+                                            <li>Phone: @teacher.Phone</li>
+                                            <li>Level Of Education: @teacher.Type.ToString()</li>
+                                            <li>Lecture Type: @teacher.lecture.ToString()</li>
+                                        </ul>
+                                    </div>
+                                }
+                                else if (user is Student student)
+                                {
+                                    <div class="card-header" style="background-color:black !important;text-align: center;font-size: 24px;">
+                                    <span style="color: #633f4a;">Student</span>
+                                    </div>
+                                    <div class="card-body flex-fill">
+                                        <h5 class="card-title">@student.Name</h5>
+                                        <ul class="modern-list">
+
+                                            <li>Email: @student.Email</li>
+                                            <li>Phone: @student.Phone</li>
+                                            <li>Department: @student.Department</li>
+                                        </ul>
+                                    </div>
+                                }
+                                else if (user is Registerer registerer)
+                                {
+                                    <div class="card-header" style="background-color:black !important;text-align: center;font-size: 24px;">
+                                        <span style="color: #633f4a;" >Registerer</span>
+                                    </div>
+                                    <div class="card-body flex-fill">
+                                        <h5 class="card-title" >@registerer.Name</h5>
+                                        <ul class="modern-list">
+
+                                            <li>Email: @registerer.Email</li>   
+                                            <li>Phone: @registerer.Phone</li> 
+                                        </ul>
+                                    </div>
+                                }
+                                
+                            }
+
+                            else if (result is Teacher teacher)
+                            {
+                                <div class="card-header" style="background-color:black !important;text-align: center;font-size: 24px;">
+                                <span style="color: #633f4a;">Teacher</span>
+                                </div>
+                                <div class="card-body flex-fill">
+                                    <h5 class="card-title">@teacher.Name</h5>
+                                    <ul class="modern-list">
+
+                                        <li>Email: @teacher.Email</li>
+                                        <li>Phone: @teacher.Phone</li>
+                                        <li>Level Of Education: @teacher.Type.ToString()</li>
+                                        <li>Lecture Type: @teacher.lecture.ToString()</li>
+                                    </ul>
+                                </div>
+
+                            }
+                            else if (result is Student student)
+                            {
+                                <div class="card-header" style="background-color:black !important;text-align: center;font-size: 24px;">
+                                    <span style="color: #633f4a;">Student</span>
+                                </div>
+                                <div class="card-body flex-fill">
+                                    <h5 class="card-title">@student.Name</h5>
+                                    <ul class="modern-list">
+
+                                        <li>Email: @student.Email</li>
+                                        <li>Phone: @student.Phone</li>
+                                        <li>Department: @student.Department</li>
+                                    </ul>
+                                </div>
+
+                            }
+                            else if (result is Registerer registerer)
+                            {
+                                    <div class="card-header" style="background-color:black !important;text-align: center;font-size: 24px;">
+                                        <span style="color: #633f4a;" >Registerer</span>
+                                    </div>
+                                    <div class="card-body flex-fill">
+                                        <h5 class="card-title" >@registerer.Name</h5>
+                                        <ul class="modern-list">
+
+                                            <li>Email: @registerer.Email</li>
+                                            <li>Phone: @registerer.Phone</li>
+                                        </ul>
+                                    </div>
+                                
+                            }
+                            else if (result is MessageContainer messageContainer)
+                            {
+
+                                    <div class="card-header" style="background-color:black !important;text-align: center;font-size: 24px;">
+                                        <span style="color: #633f4a;">Message</span>
+                                    </div>
+                                    <div class="card-body flex-fill">
+                                        <h5 class="card-title">@messageContainer.subject</h5>
+                                        <ul class="modern-list">
+
+                                            <li>From: @messageContainer.messager</li>
+                                            <li>To: @messageContainer.receiver</li>
+                                            <li class="message-text" >Message: @messageContainer.message</li>
+                                        </ul>
+                                    </div>
+                            }
+                        else if (result is Product product)
+                        {
+
+                            <div class="card-header" style="background-color:black !important;text-align: center;font-size: 24px;">
+                                <span style="color: #633f4a;">Product</span>
+                            </div>
+                            <div class="card-body flex-fill">
+                                <h5 class="card-title">@product.Title</h5>
+                                <ul class="modern-list">
+                                    
+                                    <li>by @product.Author</li>
+                                    <li>Price: @product.ListPrice</li>
+                                    <li>QUantity: @product.Quantity</li>
+                                    <li>Lecture: @product.Lecture</li>
+                                </ul>
+                            </div>
+                        }
+                       </div>
+               </div> 
+            }
+     </div>
+</div>
+}
+
+<style>
+    .card-title
+    {
+        text-align:center;
+        color:blueviolet;
+        
+    }
+    .modern-list li
+    {
+        color:aqua;
+    }
+
+</style>
+
+                                            
